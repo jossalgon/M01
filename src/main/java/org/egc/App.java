@@ -17,7 +17,7 @@ public class App
     public static int multiplica(int a, int b)
     {
         log.info("Multiplicando");
-        return (a / b);
+        return (a + b);
     }
 }
 
