@@ -3,6 +3,11 @@ package org.egc;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeUtils;
+import org.joda.time.LocalDateTime;
+import org.joda.time.LocalDate;
+
 /**
  * Unit test for simple App.
  */
@@ -44,5 +49,20 @@ public class AppTest
     {
         assertTrue(App.multiplica(3,3) != 6);
     }
-
+    
+    public void testDate()
+    {
+        LocalDate startDate = new LocalDate(2016, 11, 2);
+        LocalDateTime startDateTime = new LocalDateTime(2016, 11, 2, 14, 0);
+        LocalDate forCompare = startDateTime.toLocalDate();
+        assertTrue(forCompare.equals(startDate));
+    }
+    
+    public void testNegativoDate()
+    {
+        LocalDate startDate = new LocalDate(2017, 11, 2);
+        LocalDateTime startDateTime = new LocalDateTime(2016, 11, 2, 14, 0);
+        LocalDate forCompare = startDateTime.toLocalDate();
+        assertTrue(!forCompare.equals(startDate));
+    }
 }
