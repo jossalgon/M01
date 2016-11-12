@@ -3,7 +3,6 @@ package org.egc;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-
 /**
  * Unit test for simple App.
  */
@@ -35,4 +34,15 @@ public class AppTest
     {
         assertTrue( true );
     }
+    
+    public void testMultiplica()
+    {
+        assertTrue(App.multiplica(3,2) == 6);
+    }
+    
+    public void testNegativoMultiplica()
+    {
+        assertTrue(App.multiplica(3,3) != 6);
+    }
+
 }
