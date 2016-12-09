@@ -1,2 +1,2 @@
 # M01
-Proyecto Maven EGC.
+Proyecto Maven EGC 16/17.
